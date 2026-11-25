@@ -23,3 +23,11 @@ dist/
 # ---- 日志与临时文件 ----
 *.log
 *.tmp
+
+# ---- 本地建模调研 / 浏览器验证产物 ----
+.downloads/
+.shots/
+.chrome-profile/
+.chrome-profile-*/
+model-sitemap.xml
+model-preview.html

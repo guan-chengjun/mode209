@@ -1,0 +1,15 @@
+{
+  "name": "ozone-generator-3d-simulation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "管式臭氧发生器高压放电与氧气转化示意 3D 仿真",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js --open",
+    "serve": "node server.js",
+    "dev": "node server.js --open"
+  },
+  "dependencies": {
+    "three": "^0.180.0"
+  }
+}

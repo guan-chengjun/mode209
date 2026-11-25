@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>臭氧发生器 3D 动态仿真</title>
+  <link rel="stylesheet" href="/src/style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "/node_modules/three/build/three.module.js",
+        "three/addons/": "/node_modules/three/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="app" aria-label="臭氧发生器三维仿真场景"></div>
+
+  <header class="title-card">
+    <h1>管式臭氧发生器原理示意</h1>
+    <p>蓝色 O₂ 粒子经高压放电区后变为紫色 O₃ 粒子</p>
+  </header>
+
+  <section class="control-panel" aria-label="仿真控制">
+    <button id="toggleBtn" class="primary" type="button">暂停仿真</button>
+    <button id="resetBtn" type="button">重置粒子</button>
+
+    <label class="slider-row">
+      <span>放电频率</span>
+      <input id="frequency" type="range" min="0.5" max="2.6" step="0.1" value="1.2" />
+      <output id="frequencyValue">1.2 次/秒</output>
+    </label>
+
+    <div class="legend">
+      <span><i class="dot oxygen"></i>O₂ 干燥氧气</span>
+      <span><i class="dot ozone"></i>O₃ 臭氧</span>
+    </div>
+    <p id="statusText" class="status running">● 运行中</p>
+    <a class="credits-link" href="/assets/models/CREDITS.md" target="_blank" rel="noopener">GLB 模型来源与许可</a>
+  </section>
+
+  <div class="hint">左键旋转 · 滚轮缩放 · 右键平移</div>
+  <div id="loading" class="loading">正在加载 GLB 模型与仿真场景…</div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
